@@ -14,7 +14,9 @@ public class BalancesAccountsAccountIdGetHandler implements LightHttpHandler {
     public void handleRequest(HttpServerExchange exchange) throws Exception {
         Map<String, Object> auditInfo = exchange.getAttachment(AttachmentConstants.AUDIT_INFO);
         String userId = (String)auditInfo.get(Constants.USER_ID_STRING);
+        logger.debug("userId = " + userId);
         String accountId = exchange.getQueryParameters().get("AccountId").getFirst();
+        logger.debug("accountId = " + accountId);
         String responseBody = null;
         if("stevehu".equals(userId)) {
             switch(accountId) {
