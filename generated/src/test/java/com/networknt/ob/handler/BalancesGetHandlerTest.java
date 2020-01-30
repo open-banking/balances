@@ -60,12 +60,12 @@ public class BalancesGetHandlerTest {
             ClientRequest request = new ClientRequest().setPath(requestUri).setMethod(Methods.GET);
             
             //customized header parameters 
-            request.getRequestHeaders().put(new HttpString("Authorization"), "lgqxwwF");
-            request.getRequestHeaders().put(new HttpString("x-customer-user-agent"), "RHrxesuKxR");
-            request.getRequestHeaders().put(new HttpString("x-fapi-interaction-id"), "xPlKbiotYopGoWmELEp");
-            request.getRequestHeaders().put(new HttpString("x-fapi-customer-ip-address"), "aIOnJWJRkXgzalPEljVadMx");
-            request.getRequestHeaders().put(new HttpString("x-fapi-financial-id"), "TzRxRAEQwbPvZnceXXxTp");
-            request.getRequestHeaders().put(new HttpString("x-fapi-customer-last-logged-time"), "TMAIARJUqzCEDC");
+            request.getRequestHeaders().put(new HttpString("Authorization"), "uaZGWmzvmvpMtbgqEitDWSJWtr");
+            request.getRequestHeaders().put(new HttpString("x-customer-user-agent"), "hlrRL");
+            request.getRequestHeaders().put(new HttpString("x-fapi-interaction-id"), "owQTWZtIxfdocNSrTT");
+            request.getRequestHeaders().put(new HttpString("x-fapi-customer-ip-address"), "TQlfNoRgSQoMzfD");
+            request.getRequestHeaders().put(new HttpString("x-fapi-financial-id"), "gJnweEOTkDxBbauGefhmvcw");
+            request.getRequestHeaders().put(new HttpString("x-fapi-customer-last-logged-time"), "wiBQKjTlkpGQomRmHaUNocu");
             connection.sendRequest(request, client.createClientCallback(reference, latch));
             
             latch.await();

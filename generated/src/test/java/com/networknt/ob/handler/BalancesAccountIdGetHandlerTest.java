@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
 
 
 @Ignore
-public class BalancesAccountsAccountIdGetHandlerTest {
+public class BalancesAccountIdGetHandlerTest {
     @ClassRule
     public static TestServer server = TestServer.getInstance();
 
-    static final Logger logger = LoggerFactory.getLogger(BalancesAccountsAccountIdGetHandlerTest.class);
+    static final Logger logger = LoggerFactory.getLogger(BalancesAccountIdGetHandlerTest.class);
     static final boolean enableHttp2 = server.getServerConfig().isEnableHttp2();
     static final boolean enableHttps = server.getServerConfig().isEnableHttps();
     static final int httpPort = server.getServerConfig().getHttpPort();
@@ -43,7 +43,7 @@ public class BalancesAccountsAccountIdGetHandlerTest {
     static final String JSON_MEDIA_TYPE = "application/json";
 
     @Test
-    public void testBalancesAccountsAccountIdGetHandlerTest() throws ClientException {
+    public void testBalancesAccountIdGetHandlerTest() throws ClientException {
 
         final Http2Client client = Http2Client.getInstance();
         final CountDownLatch latch = new CountDownLatch(1);
@@ -54,18 +54,18 @@ public class BalancesAccountsAccountIdGetHandlerTest {
             throw new ClientException(e);
         }
         final AtomicReference<ClientResponse> reference = new AtomicReference<>();
-        String requestUri = "/balances/accounts/tugcOEsrJbpGO";
+        String requestUri = "/balances/kYBcBCEmb";
         String httpMethod = "get";
         try {
             ClientRequest request = new ClientRequest().setPath(requestUri).setMethod(Methods.GET);
             
             //customized header parameters 
-            request.getRequestHeaders().put(new HttpString("Authorization"), "ShupVUGC");
-            request.getRequestHeaders().put(new HttpString("x-customer-user-agent"), "fOigSRmqHKS");
-            request.getRequestHeaders().put(new HttpString("x-fapi-interaction-id"), "gwRQFSve");
-            request.getRequestHeaders().put(new HttpString("x-fapi-customer-ip-address"), "SKJdB");
-            request.getRequestHeaders().put(new HttpString("x-fapi-financial-id"), "nASyRD");
-            request.getRequestHeaders().put(new HttpString("x-fapi-customer-last-logged-time"), "QazLEkyuuhAYKmNqiRmhfOpdW");
+            request.getRequestHeaders().put(new HttpString("Authorization"), "aTyAx");
+            request.getRequestHeaders().put(new HttpString("x-customer-user-agent"), "GSEXIZpnpsYZDFLbf");
+            request.getRequestHeaders().put(new HttpString("x-fapi-interaction-id"), "TkiIsPeNYujPnoR");
+            request.getRequestHeaders().put(new HttpString("x-fapi-customer-ip-address"), "JsFRebMGlUUqv");
+            request.getRequestHeaders().put(new HttpString("x-fapi-financial-id"), "BsctabygTYrGYUFXK");
+            request.getRequestHeaders().put(new HttpString("x-fapi-customer-last-logged-time"), "DDIfRsWKStBNBRw");
             connection.sendRequest(request, client.createClientCallback(reference, latch));
             
             latch.await();
