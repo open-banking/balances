@@ -14,7 +14,7 @@ servers:
   - url: 'http://ob.lightapi.net'
   
 paths:
-  "/balances/accounts/{AccountId}":
+  "/balances/{AccountId}":
     get:
       tags:
         - Balances
@@ -411,7 +411,7 @@ components:
         - Available
         - Credit
         - Emergency
-        - Pre-Agreed
+        - PreAgreed
         - Temporary
 
     OBActiveCurrencyAndAmount_SimpleType:
